@@ -1,3 +1,5 @@
+//UPDTAE
+//UPDATE
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
 const cheerio = require("cheerio");
@@ -1325,6 +1327,20 @@ if (text.includes(">seberapagay")){
 const teks = text.replace(/>seberapagay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
     let hasil = `${res.data.desc}\n*Tingkay Gay Nya:* ${res.data.persen}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(">chopper")){
+const teks = text.replace(/>chopper /, "")
+axios.get(`https://simsimi.copcute.pw/api/?text=${text}&lang=id`).then((res) => {
+    let hasil = `${res.data.success}`
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(">per")){
+const teks = text.replace(/>per /, "")
+axios.get(`https://simsimi.copcute.pw/api/?text=${text}&lang=id`).then((res) => {
+    let hasil = `${res.data.success}`
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
